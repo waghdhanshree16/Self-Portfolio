@@ -5,19 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Libray</title>
 
-    <!-- CSS way 1: style Tag
-
-    <style>
-        body{
-            color: red;
-        }
-    </style>-->
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="lib-header">dhanshree libray</h1>
-    <p class="para">I am attending neog.comp and I want to make a library which would make all my project look good and consistent</p>
+    <h1>dhanshree libray</h1>
+    <p>I am attending neog.comp and I want to make a library which would make all my project look good and consistent</p>
 
     <hr>
 
@@ -26,6 +18,7 @@
     <h1>This is the biggest heading</h1>
     <h2>This is the second biggest</h2>
     <p>Let me show you the normal text. This is the free flowing and will wrap at the end like a paragraph.</p>
+    <p>This paragraph will have a <strong>bold</strong> text</p>
     <small>This is relatively smaller text</small>
     <small>This is relatively smaller 2 text</small>
 
@@ -34,40 +27,37 @@
     <h2>@container</h2>
 
     <h3>fluid container</h3>
-    <div>This is a fluid container and it will go till the end of the page</div>
+    <div class=" container container-fluid">This is a fluid container and it will go till the end of the page</div>
 
     <h3>center container</h3>
 
-    <div>This is a centered container and it will go till the specified width</div>
+    <div class="container container-center">This is a centered container and it will go till the specified 
 
     <hr>
 
     <h2>@Links</h2>
-
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a>
+    <a class="link link-primary" href="/">Primary Link</a>
+    <a class="link link-secondary" href="/">Secondary Link</a>
 
     <hr>
 
     <h2>@Lists</h2>  
 
     <h3>unordered list</h3>
+    <p>This list will not have the bullet</p>
 
-    <ul>
+    <ul class="list-non-bullet">
         <li>Item One</li>
           <li>Item Two</li>
           <li>Item Three</li>
     </ul>
 
+    <h3>unoredered inline list</h3>
 
-    <h3>
-        unoredered inline list
-    </h3>
-
-    <ul>
-        <li>Inline Item One</li>
-        <li>Inline Item Two</li>
-        <li>Inline Item Three</li>
+    <ul class="list-non-bullet">
+        <li class="list-item-inline">Inline Item One</li>
+        <li class="list-item-inline">Inline Item Two</li>
+        <li class="list-item-inline">Inline Item Three</li>
 
     </ul>
 
@@ -77,57 +67,70 @@
         <li>eggs</li>
         <li>break</li>
     </ol>
-
+ 
     <hr>
-
     <h2>@nav</h2>
-
-    <nav>
-        <div>iAmBrand</div>
-        <ul>
-            <li>
-                <a href="/">Home</a>
+    <nav class="navigation container">  
+        <div class="nav-brand">iAmBrand</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active" href="/">Home</a>
             </li>
-            <li>
-                <a href="/">product</a>
+            <li class="list-item-inline">
+                <a class="link" href="/">product</a> 
             </li>
-            <li>
-                <a href="/">about</a>
+            <li class="list-item-inline">
+                <a  class="link" href="/">about</a>
             </li>
-        </ul>
+        </ul> 
     </nav>
- <hr>
+  <hr>
  <h2>@header</h2>
 
- <header>
-    <img src="images/hero_image1.svg"/>
-    <h1>heading inside header</h1>
+ <header class="hero">
+    <img class="hero-img" src="images/hero_image1.svg"/>
+    <h1 class="hero-heading">adarsh balika the <span class="heading-inverted"> web developer</span></h1>
  </header>
-
  <hr>
 
-<h2>@section</h2>
+<h2>@section</h2> 
 
- <section>
-<h3>white section</h3>
-<p>This will have white background</p>
+ <section class="section">
+    <div class="container container-center">
+<h1>white section</h1>
+<p>We are an open community of developers building resoures for a better Web, regardless of brand, browser, or platform. Anyone can contribute and each persons who does make us stronger. Together we can continue to drive innovation on the Web to serve the grater good. It starts here, with you.</p>
+</div>
  </section>
 
- <section>
-    <h3>center section</h3>
-    <p>This will have gray background</p>
+ <section class="section ow">
+    <div class="container container-center">
+    <h1>off white section</h1>
+    <p>We are an open community of developers building resoures for a better Web, regardless of brand, browser, or platform. Anyone can contribute and each persons who does make us stronger. Together we can continue to drive innovation on the Web to serve the grater good. It starts here, with you.</p>
+</div>
      </section>
 
      <hr>
 
      <h2>@footer</h2>
 
-     <footer>
-        <div>Some small heading inside footer</div>
-        <ul>
-            <li>socialone</li>
-            <li>socialTwo</li>
-            <li>socialThree</li>
+     <footer class="footer">
+        <div class="footer-header">Some small heading inside footer</div>
+        <ul class="social-links list-non-bullet">
+            <li 
+            class="list-item-inline"> 
+                <a class="link" href="/">socialOne</a>
+            </li>
+
+            <li
+             class="list-item-inline"> 
+                <a class="link" href="/">socialTwo</a>
+            </li>
+
+            <li
+             class="list-item-inline"> 
+                <a class="link" href="/">socialThree</a>
+            </li>
+            
         </ul>
      </footer>
 

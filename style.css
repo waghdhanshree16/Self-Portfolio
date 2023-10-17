@@ -1,134 +1,372 @@
-@import url('https://fonts.googleapis.com/css2?family-Montserrat:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 :root {
-    --primary-color: #7C3AED;
-    --off-white:#f3f4f6;
-    --dark-gray:#6B7280;
-    
-}
-body {
-    font-family: 'montserrat',sans-serif;
-}
-hr {
-    margin: 3rem 0rem;
+  --primary-color: #1565c1;
+  --offwhite-color: #f3f4f6;
+  --darkgray-color:#6b7280;
 }
 
-/* container */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0px auto;
+  max-width: 85%;
+  width: 100%;
+}
+
+hr {
+  margin: 2rem 0rem;
+}
+
+/** spaces **/
+
+.margin-md {
+  margin: 2rem;
+}
+
+/** container **/
 .container {
-    padding: 0rem 1rem ;
-    
+  padding: 0rem 1rem;
 }
 
 .container-center {
-    max-width: 600px;
-    margin: auto;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
 }
 
-/* Links */
-
+/** links **/
 .link {
-    text-decoration: none;
-    padding: 0.5rem  1rem;
-
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 }
 
 .link-primary {
-    background-color: var(--primary-color);
-    border-radius:0.5rem ;
-    columns: white;
+  max-width: 140px;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  margin: 1rem auto;
+  border-radius: 1rem;
 }
- 
+
 .link-secondary {
-    color: var(--primary-color);
-    border-radius:0.5rem ;
-    border: 1px solid var(--primary-color);
+  max-width: 140px;
+  margin: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
-/* look into BEM naming convention for CSS */
+/** look into BEM naming convention for CSS **/
 
-/* lists */
+/** lists **/
 
 .list-non-bullet {
-    list-style: none;
+  list-style: none;
+  padding-inline-start: 0px;
 }
 
 .list-item-inline {
-    display: inline;
-    padding: 0rem 0.5rem;
+  display: inline;
+  padding: 0rem 0.5rem;
 }
 
-/* navigation */
-
+/** navigation **/
+/* 
 .navigation {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    border-bottom-left-radius:1rem ;
- }
-
- .navigation .nav-brand {
-    font-weight: bold;
-
- }
- 
- .navigation .nav-pills {
-     text-align: right;
- }
-
- .navigation .link {
-    color: white;
- }
-
- .navigation .link-active {
-    font-weight: bold;
- }
-
- /* header */
-
- .hero {
-    padding: 2rem;
- }
-
- .hero .hero-img {
-    max-width: 350px;
-    display: block;
-    margin: auto;
- }
-
- .hero .hero-heading {
-    padding-top: 1rem ;
-   color: var(--dark-gray);
- }
-
- .hero .hero-heading .heading-inverted {
-    color: var(--primary-color);
- }
-
- /* section */
-
- .section {
-    padding:  2rem;
- }
- .section h1 {
-    text-align: center;
-   
- }
-.ow {
-    background-color: var(--off-white);
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
-/* footer */
+.navigation .nav-brand {
+  font-weight: bold;
+}
+
+.nav-brand a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation .nav-pills {
+  text-align: right;
+  margin: 0.6rem 1rem;
+}
+
+.navigation .link {
+  color: white;
+}
+
+.navigation .link-active {
+  font-weight: bold;
+} */
+
+/* RESPONSIVE NAVBAR CODE */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+/* body {
+  font-family: cursive;
+} */
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 1rem; */
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-bottom-left-radius: 25px;
+}
+.nav-links a {
+  color: #fff;
+}
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    /* justify-content: center; */
+    /* margin-top: 16px; */
+    margin: 15px auto;
+    max-width: 95%;
+    height: 325px;
+    /* width: 100%; */
+    border-bottom-left-radius: 25px;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 15px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  /* #checkbox_toggle:checked ~ .menu i::before {
+    content: "\f00d";
+  } */
+  /* .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  } */
+}
+
+/** header **/
+
+.hero {
+  padding: 2rem;
+  padding-top: 5rem;
+}
+
+.hero .hero-img {
+  max-width: 50%;
+  width: 550px;
+  display: block;
+  margin: auto;
+}
+
+.hero .hero-heading {
+  text-align: center;
+  padding-top: 1rem;
+  color: var(--darkgray-color);
+}
+
+.hero .hero-heading .heading-inverted {
+  color: var(--primary-color);
+}
+
+/** sections **/
+
+.section {
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.section h1 {
+  text-align: center;
+}
+
+.ow {
+  background-color: var(--offwhite-color);
+}
+
+/** footers **/
 
 .footer {
-    background-color: var(--primary-color);
-    padding: 2rem 1rem;
-    text-align: center;
-    color: white;
-    border-bottom-right-radius: 1rem;
+  background-color: var(--primary-color);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 1rem;
 }
 
-.footer .link{
-    color: white;
+.footer .link {
+  color: white;
 }
- 
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+
+/** projects **/
+.showcase-list {
+  /* padding: 2rem; */
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 3rem auto;
+}
+.showcase-list h1 {
+  margin: 0.5rem;
+}
+
+.showcase-list p {
+  padding-bottom: 1rem;
+}
+
+/** blogs **/
+
+.showcase-blog {
+  padding-bottom: 6rem;
+}
+
+/* Contact Us CSS start */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+[type="email"],
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+button[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.form-container {
+  border-radius: 5px;
+  background-color: var(--offwhite-color);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+.msg{
+  min-height: 150px;
+}
+/* Contact us css end Here */
+.self-image {
+  max-width: 35%;
+  width: 550px;
+  display: block;
+  margin: auto;
+}
+
+/* text bold */
+.bold{
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  body {
+    max-width: 95%;
+    width: 100%;
+  }
+
+  .list-item-inline {
+    display: inline;
+    padding: 0rem;
+  }
+
+  .container-center {
+    width: auto;
+  }
+
+  .link-primary {
+    display: block;
+  }
+}

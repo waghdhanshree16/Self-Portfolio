@@ -7,4 +7,4 @@
 3.Javascrip
 
 ## Live demo : 
---> https://golden-hummingbird-ce6679.netlify.app/projects
+--> https://golden-hummingbird-ce6679.netlify.app/

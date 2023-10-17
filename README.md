@@ -1,6 +1,6 @@
 # Self-Portfolio
 <br/>
-## Technologies used
+# Technologies used
 <br/>
 1.HTML
 2.CSS
